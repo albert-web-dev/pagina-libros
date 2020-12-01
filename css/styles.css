@@ -1,0 +1,162 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.imagen{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(70, 33, 26, 0.35);
+}
+.imagen__img{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+
+.menu{
+    height: 100vh;
+}
+.menu__nav{
+    width: 100%;
+    height: 10vh;
+    background-color: rgb(70, 30, 26);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu__logo{
+    margin-left: 10vw;
+}
+.menu__links{
+    margin-right: 10vw;
+}
+
+.menu__logoLink,
+.menu__link{
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    font-size: 17px;
+    
+}
+
+.menu__link:nth-child(1){
+    margin-right: 15px;
+}
+.menu__link:nth-child(2){
+    margin-right: 15px;
+}
+
+.menu__nombre{
+    width: 40vw;
+    margin-left: 10vw;
+    margin-top: 30vh;
+    background-color:  rgb(70, 33, 26, .9);
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgb(70, 33, 26, 0.8);
+    padding: 15px;
+}
+.menu__titulo{
+    display: inline-block;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 100px;
+    color: white;
+}
+.menu__agradecimiento{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*...................................main........................................*/
+.container{
+    font-family: 'Montserrat', sans-serif;
+    width: 80vw;
+    height: 100%;
+    margin-left: 10vw;
+
+    grid-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: "container__titulo     container__titulo   container__titulo"
+                         "container__libros     container__libros   container__libros"
+                         "container__libros     container__libros   container__libros"
+                         "container__libros     container__libros   container__libros";
+}
+.container__titulo{
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    color: #46211A;
+    grid-area: container__titulo;
+}
+.container__libros{
+    grid-area: container__libros;
+    height: 100%;
+    border-radius: 10px;
+   
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "container__card0   container__card1   container__card2"
+                         "container__card3   container__card4   container__card5"
+                         "container__card6   container__card7   container__card8";
+}
+
+.container__card{
+    background-color: rgba(186, 85, 54, 0.9);;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    box-shadow: 5px 5px 10px rgba(186, 85, 54);
+    margin-bottom: 20px;
+}
+.container__img{
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    margin-right: 5px;
+}
+.container__info{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: 'Montserrat', sans-serif;
+}
+.container__info > h3{
+    color: #46211A;
+}
+.container__span{
+    color: white;
+    margin-left: 2px;
+}
+/*...................................footer........................................*/
+.footer{
+    position: relative;
+    margin-left: 10vw;
+    width: 80vw;
+    height: 30vh;
+    background-color: #693d3d;
+    border-radius: 10px;
+}
+.footer__texto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.footer__despedida,
+.footer__miPagina{
+    margin-top: 7vh;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
